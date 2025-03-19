@@ -1,0 +1,27 @@
+\{
+  "devices": [
+    {
+      "deviceName": "Simulated Cisco Router",
+      "deviceType": "snmp",
+      "ip": "45.10.11.1",
+      "port": 161,
+      "pollPeriod": 5000,
+      "community": "public",
+      "attributes": [
+        {
+          "key": "SystemDescription",
+          "method": "get",
+          "oid": "1.3.6.1.2.1.1.1.0",
+          "timeout": 6
+        }
+      ],
+      "telemetry": [
+        {
+          "key": "SystemName",
+          "method": "get",
+          "oid": "1.3.6.1.2.1.1.5.0"
+        }
+      ]
+    }
+  ]
+}

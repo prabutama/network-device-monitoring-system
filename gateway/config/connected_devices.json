@@ -1,0 +1,8 @@
+{
+  "Simulated Cisco Router": {
+    "connectorId": "9b36e79a-e635-48af-b7cd-9d37381312a1",
+    "connectorName": "snmp",
+    "deviceType": "snmp",
+    "renaming": null
+  }
+}

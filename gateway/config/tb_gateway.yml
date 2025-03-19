@@ -1,0 +1,11 @@
+server:
+  host: snmp-tb-server
+  port: 1883
+  accessToken: a3Q6FCPPK81i0jHvv7O4
+  tls: false
+  mqtt:
+    version: 3.1.1  # Pastikan versi ini
+connectors:
+  - name: snmp
+    type: snmp
+    configuration: snmp.json

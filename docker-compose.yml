@@ -1,0 +1,35 @@
+version: '3.0'
+services:
+  tb-server:
+    container_name: snmp-tb-server
+    restart: always
+    image: "thingsboard/tb-postgres"
+    ports:
+      - "8080:9090"
+      - "1883:1883"
+      - "7070:7070"
+      - "5683-5688:5683-5688/udp"
+    environment:
+      TB_QUEUE_TYPE: in-memory
+    volumes:
+      - ./thingsboard/data:/data
+      - ./thingsboard/logs:/var/log/thingsboard
+
+  tb-gateway:
+    # Nama layanan untuk Gateway
+    container_name: snmp-tb-gateway # Nama container
+    restart: always
+    image: "thingsboard/tb-gateway"
+    ports:
+      - "5000:5000" # REST connector (opsional)
+    environment:
+      - host=snmp-tb-server # Mengacu ke container ThingsBoard
+      - port=1883
+      - accessToken=a3Q6FCPPK81i0jHvv7O4 # Ganti dengan token Anda
+    volumes:
+      - ./gateway/config:/thingsboard_gateway/config
+      - ./gateway/logs:/thingsboard_gateway/logs
+      - ./gateway/extensions:/thingsboard_gateway/extensions
+    depends_on:
+      - tb-server
+    

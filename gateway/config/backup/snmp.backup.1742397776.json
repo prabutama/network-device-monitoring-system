@@ -1,0 +1,42 @@
+{
+  "devices": [
+    {
+      "deviceName": "Simulated Cisco Router",
+      "deviceType": "snmp",
+      "ip": "45.10.11.1",
+      "port": 161,
+      "pollPeriod": 10000,
+      "community": "public",
+      "attributes": [
+        {
+          "key": "SystemDescription",
+          "method": "get",
+          "oid": "1.3.6.1.2.1.1.1.0",
+          "timeout": 6
+        }
+      ],
+      "telemetry": [
+        {
+          "key": "SystemName",
+          "method": "get",
+          "oid": "1.3.6.1.2.1.1.5.0",
+          "timeout": 6
+        },
+        {
+          "key": "ifInOctets_TenGigE0_2_0_0",
+          "method": "get",
+          "oid": "1.3.6.1.2.1.2.2.1.10.21",
+          "timeout": 6
+        },
+        {
+          "key": "ifOutOctets_TenGigE0_2_0_0",
+          "method": "get",
+          "oid": "1.3.6.1.2.1.2.2.1.16.21",
+          "timeout": 6
+        }
+      ]
+    }
+  ],
+  "id": "9b36e79a-e635-48af-b7cd-9d37381312a1",
+  "name": "snmp"
+}
