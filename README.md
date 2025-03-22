@@ -41,7 +41,7 @@ This repository contains the development of a **Network Device Monitoring System
 
 ## Architecture
 
-   <img src="/docs/images/Diagram Proyek Akhir - Frame 1.jpg" alt="asset">
+   <img src="/docs/images/architecture.jpg" alt="asset">
 
 The network device monitoring system will be built with the design as in the diagram. There are several processes starting from data collection to visualization on the dashboard. Based on the system design that has been designed, this monitoring system has the following architecture:
 
